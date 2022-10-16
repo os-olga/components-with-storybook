@@ -3,6 +3,7 @@ import { Avatar } from "components/Avatar";
 import { Badge, BadgeTypeEnum } from "components/Badge";
 import { Checkbox } from "components/Checkbox";
 import { RadioButton } from "components/RadioButton";
+import { Toggle } from "components/Toggle";
 import { Typography, TypographyTypeEnum } from "components/Typography";
 
 import "./App.css";
@@ -22,6 +23,13 @@ function App() {
   };
   const handleChangeB = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCheckboxB(e.target.checked);
+  };
+
+  // TOGGLE
+
+  const [toggle, setToggle] = useState(false);
+  const handleChangeToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setToggle(e.target.checked);
   };
 
   return (
@@ -96,6 +104,11 @@ function App() {
           handleChange={handleChangeB}
           label={"Bus"}
         />
+      </div>
+
+      <Typography variant={TypographyTypeEnum.h1}>Toggle</Typography>
+      <div>
+        <Toggle handleChange={handleChangeToggle} checked={toggle} />
       </div>
     </div>
   );
