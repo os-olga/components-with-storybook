@@ -1,0 +1,63 @@
+.badge {
+  color: var(--white);
+  border-radius: 4px;
+  width: fit-content;
+  margin-right: 6px;
+  margin-bottom: 6px;
+
+  &_size {
+    &_sm {
+      padding: 4px 6px;
+      font-size: 10px;
+    }
+
+    &_md {
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+
+    &_lg {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  }
+
+  &_type {
+    &_notAvailable {
+      background-color: var(--notAvailable);
+    }
+    &_new {
+      background-color: var(--new);
+    }
+    &_popular {
+      background-color: var(--warning);
+    }
+    &_inactive {
+      background-color: var(--inactive);
+    }
+    &_active {
+      background-color: var(--active);
+    }
+    &_deactivated {
+      background-color: var(--deactivated);
+    }
+    &_process {
+      background-color: var(--process);
+    }
+    &_onApproval {
+      background-color: var(--warning);
+    }
+    &_completed {
+      background-color: var(--completed);
+    }
+    &_unpublished {
+      background-color: var(--inactive);
+    }
+    &_recomended {
+      background-color: var(--recomended);
+    }
+    &_competitorPosition {
+      background-color: var(--competitorPosition);
+    }
+  }
+}

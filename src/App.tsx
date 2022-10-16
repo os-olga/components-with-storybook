@@ -1,5 +1,6 @@
 import React from "react";
 import { Avatar } from "components/Avatar";
+import { Badge, BadgeTypeEnum } from "components/Badge";
 import { Typography, TypographyTypeEnum } from "components/Typography";
 
 import "./App.css";
@@ -34,6 +35,11 @@ function App() {
             size="lg"
           />
         </div>
+      </div>
+
+      <Typography variant={TypographyTypeEnum.h1}>Badges</Typography>
+      <div>
+        <Badge text="text" size="md" type={BadgeTypeEnum.new} />
       </div>
     </div>
   );
