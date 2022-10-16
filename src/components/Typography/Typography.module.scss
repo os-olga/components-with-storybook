@@ -1,0 +1,87 @@
+.typography {
+  z-index: 3;
+  display: block;
+  color: var(--black);
+
+  &_variant {
+    &_h1 {
+      font-family: "T-Star Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 38px;
+    }
+
+    &_h2 {
+      font-family: "T-Star Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    &_h3 {
+      font-family: "T-Star Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &_h4 {
+      font-family: "T-Star Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &_h5 {
+      font-family: "T-Star Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &_sub_m {
+      font-family: "T-Star Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &_sub_s {
+      font-family: "T-Star Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &_body_l {
+      font-family: "T-Star Pro";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &_body_m {
+      font-family: "T-Star Pro";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &_caption {
+      font-family: "T-Star Pro";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
