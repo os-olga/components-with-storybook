@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Avatar } from "components/Avatar";
 import { Badge, BadgeTypeEnum } from "components/Badge";
+import { RadioButton } from "components/RadioButton";
 import { Typography, TypographyTypeEnum } from "components/Typography";
 
 import "./App.css";
 
 function App() {
+  const [selectedRadio, setSelectedRadio] = useState<String>();
+  const radioHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedRadio(event.target.value);
+  };
+
   return (
     <div className="App">
       <Typography variant={TypographyTypeEnum.h1}>Avatars</Typography>
@@ -40,6 +46,30 @@ function App() {
       <Typography variant={TypographyTypeEnum.h1}>Badges</Typography>
       <div>
         <Badge text="text" size="md" type={BadgeTypeEnum.new} />
+      </div>
+
+      <Typography variant={TypographyTypeEnum.h1}>Radio buttons</Typography>
+      <div>
+        <RadioButton
+          value={"cat"}
+          name={"animals"}
+          label={"Cat"}
+          handleChange={radioHandler}
+        />
+
+        <RadioButton
+          label={"Dog"}
+          value={"dog"}
+          name={"animals"}
+          handleChange={radioHandler}
+        />
+
+        <RadioButton
+          label={"Fox"}
+          value={"fox"}
+          name={"animals"}
+          handleChange={radioHandler}
+        />
       </div>
     </div>
   );
