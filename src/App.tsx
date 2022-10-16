@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Avatar } from "components/Avatar";
 import { Badge, BadgeTypeEnum } from "components/Badge";
+import { Checkbox } from "components/Checkbox";
 import { RadioButton } from "components/RadioButton";
 import { Typography, TypographyTypeEnum } from "components/Typography";
 
@@ -10,6 +11,17 @@ function App() {
   const [selectedRadio, setSelectedRadio] = useState<String>();
   const radioHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedRadio(event.target.value);
+  };
+
+  // CHECKBOX
+  const [checkboxA, setCheckboxA] = useState(false);
+  const [checkboxB, setCheckboxB] = useState(false);
+
+  const handleChangeA = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setCheckboxA(e.target.checked);
+  };
+  const handleChangeB = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setCheckboxB(e.target.checked);
   };
 
   return (
@@ -69,6 +81,20 @@ function App() {
           value={"fox"}
           name={"animals"}
           handleChange={radioHandler}
+        />
+      </div>
+
+      <Typography variant={TypographyTypeEnum.h1}>Checkboxes</Typography>
+      <div>
+        <Checkbox
+          checked={checkboxA}
+          handleChange={handleChangeA}
+          label={"Car"}
+        />
+        <Checkbox
+          checked={checkboxB}
+          handleChange={handleChangeB}
+          label={"Bus"}
         />
       </div>
     </div>
