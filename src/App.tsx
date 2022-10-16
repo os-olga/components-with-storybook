@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Avatar } from "components/Avatar";
 import { Badge, BadgeTypeEnum } from "components/Badge";
+import { Card } from "components/Card";
 import { Checkbox } from "components/Checkbox";
 import { RadioButton } from "components/RadioButton";
 import { Toggle } from "components/Toggle";
 import { Typography, TypographyTypeEnum } from "components/Typography";
+import { camerasCard } from "mock";
 
 import "./App.css";
 
@@ -109,6 +111,13 @@ function App() {
       <Typography variant={TypographyTypeEnum.h1}>Toggle</Typography>
       <div>
         <Toggle handleChange={handleChangeToggle} checked={toggle} />
+      </div>
+
+      <Typography variant={TypographyTypeEnum.h1}>Cards</Typography>
+      <div className="cameras">
+        {camerasCard?.map((item) => {
+          return <Card key={item.id} item={item} isInCatalogue={true} />;
+        })}
       </div>
     </div>
   );
