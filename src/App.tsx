@@ -3,6 +3,7 @@ import { Avatar } from "components/Avatar";
 import { Badge, BadgeTypeEnum } from "components/Badge";
 import { Card } from "components/Card";
 import { Checkbox } from "components/Checkbox";
+import { Input } from "components/Input";
 import { RadioButton } from "components/RadioButton";
 import { Toggle } from "components/Toggle";
 import { Typography, TypographyTypeEnum } from "components/Typography";
@@ -32,6 +33,11 @@ function App() {
   const [toggle, setToggle] = useState(false);
   const handleChangeToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
     setToggle(e.target.checked);
+  };
+
+  const [password, setPassword] = useState("");
+  const handlePasswordChange = (e: any) => {
+    setPassword(e.target.value);
   };
 
   return (
@@ -118,6 +124,16 @@ function App() {
         {camerasCard?.map((item) => {
           return <Card key={item.id} item={item} isInCatalogue={true} />;
         })}
+      </div>
+
+      <Typography variant={TypographyTypeEnum.h1}>Inputs</Typography>
+      <div>
+        <Input
+          name={"name"}
+          value={password}
+          label={"Enter password"}
+          handleChange={handlePasswordChange}
+        />
       </div>
     </div>
   );

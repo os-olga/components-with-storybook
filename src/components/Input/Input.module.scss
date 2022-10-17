@@ -1,0 +1,59 @@
+.input {
+  position: relative;
+  max-width: 328px;
+  width: 100%;
+  height: 56px;
+  border-radius: 4px;
+  background: var(--white);
+  border: 1px solid var(--main-grey);
+
+  &:focus-within {
+    border-color: var(--main);
+    .label {
+      color: var(--main);
+    }
+  }
+
+  .label {
+    position: absolute;
+    top: 17px;
+    left: 16px;
+    transition: all 0.3s linear;
+    background: var(--white);
+    padding: 0 4px;
+  }
+
+  .tag {
+    border: none;
+
+    font-family: "T-Star Pro";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(---black);
+    border: none;
+    transition: all 0.3s linear;
+
+    padding: 10px;
+    width: calc(100% - 22px);
+    height: calc(100% - 22px);
+    margin: 1px;
+
+    &:focus {
+      outline: none;
+    }
+
+    input {
+      background-color: pink;
+    }
+  }
+
+  &.active {
+    .label {
+      position: absolute;
+      top: -10px;
+      transition: all 0.3s linear;
+    }
+  }
+}
